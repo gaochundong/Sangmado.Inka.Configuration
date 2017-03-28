@@ -1,4 +1,4 @@
-﻿namespace RockStone.Inka.Configuration
+﻿namespace Sangmado.Inka.Configuration
 {
     public interface IAppSetting : IConfiguration
     {

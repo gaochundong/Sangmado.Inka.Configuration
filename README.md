@@ -1,1 +1,1 @@
-# RockStone.Inka.Configuration
+# Sangmado.Inka.Configuration

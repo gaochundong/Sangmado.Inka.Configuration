@@ -3,7 +3,7 @@ using System.Configuration;
 using System.Globalization;
 using System.Linq;
 
-namespace RockStone.Inka.Configuration
+namespace Sangmado.Inka.Configuration
 {
     public class AppSetting : IAppSetting
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RockStone.Inka.Configuration
+namespace Sangmado.Inka.Configuration
 {
     public interface IConfiguration
     {
