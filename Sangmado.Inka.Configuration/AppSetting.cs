@@ -27,5 +27,32 @@ namespace Sangmado.Inka.Configuration
 
             return default(T);
         }
+
+        public void Add(string itemName, string itemValue)
+        {
+            var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+
+            config.AppSettings.Settings.Add(itemName, itemValue);
+
+            config.Save(ConfigurationSaveMode.Modified);
+        }
+
+        public void Update(string itemName, string itemValue)
+        {
+            var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+
+            config.AppSettings.Settings[itemName].Value = itemValue;
+
+            config.Save(ConfigurationSaveMode.Modified);
+        }
+
+        public void Remove(string itemName)
+        {
+            var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+
+            config.AppSettings.Settings.Remove(itemName);
+
+            config.Save(ConfigurationSaveMode.Modified);
+        }
     }
 }
