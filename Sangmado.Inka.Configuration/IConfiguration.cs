@@ -5,8 +5,10 @@ namespace Sangmado.Inka.Configuration
     public interface IConfiguration
     {
         T GetItem<T>(string itemName) where T : IConvertible;
-        void Add(string itemName, string itemValue);
-        void Update(string itemName, string itemValue);
-        void Remove(string itemName);
+        void AddItem<T>(string itemName, T itemValue);
+        void UpdateItem<T>(string itemName, T itemValue);
+        void AddOrUpdateItem<T>(string itemName, T itemValue);
+        void AppendItem<T>(string itemName, T appendedItemValue);
+        void RemoveItem(string itemName);
     }
 }
